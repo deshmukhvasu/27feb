@@ -1,0 +1,45 @@
+---
+- name: Change to the directory
+  file:
+    path: /opt/tomcat
+    state: directory
+    recurse: yes
+    group: tomcat
+
+- name: read access ownership over the entire directory
+  file:
+    path: /opt/tomcat/conf
+    state: directory
+    recurse: yes
+    mode: g+r
+
+- name: execute access ownership over the entire directory
+  file:
+    path: /opt/tomcat/conf
+    state: directory
+    mode: g+x     
+
+- name: Change file ownership of webapps
+  file:
+    path: /opt/tomcat/webapps
+    owner: tomcat
+    state: directory
+    recurse: yes
+- name: Change file ownership of  work
+  file:
+    path: /opt/tomcat/work
+    owner: tomcat
+    state: directory
+    recurse: yes
+- name: Change file ownership of temp
+  file:
+    path: /opt/tomcat/temp
+    owner: tomcat
+    state: directory
+    recurse: yes
+- name: Change file ownership of logs
+  file:
+    path: /opt/tomcat/logs
+    owner: tomcat
+    state: directory
+    recurse: yes        
