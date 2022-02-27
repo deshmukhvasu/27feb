@@ -1,0 +1,15 @@
+---
+ - name: download Tomcat 
+   get_url:
+    url: "https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.5/bin/apache-tomcat-8.5.5.tar.gz"
+    dest: /home/ubuntu/apache-tomcat-8.5.5.tar.gz
+
+ - name: Create a directory if it does not exist
+   file:
+    path: /opt/tomcat
+    state: directory
+
+ - name: I want to extract file 
+   command:
+   cmd: sudo tar xzvf apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1
+   creates: /opt/tomcat/LICENCE 

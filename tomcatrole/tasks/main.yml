@@ -2,3 +2,4 @@
 
 - include_tasks: InstallJava.yml
 - include_tasks: TomcatUser.yml
+- include_tasks: InstallTomcat.yml
