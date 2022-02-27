@@ -1,7 +1,6 @@
 ---
  - name: update your apt-get package
    apt:
-    name: update
     update_cache: yes
 
 
