@@ -1,5 +1,0 @@
----
-- hosts: nodeserver
-  become: yes
-  roles:
-  - {role: 27FEB, when: ansible_os_family=="Debian"}
