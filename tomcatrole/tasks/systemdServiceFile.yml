@@ -1,6 +1,6 @@
 ---
  - name: Create a Template file 
    template:
-    src: /templates/myservice.j2
+    src: templates/myservice.j2
     dest: /etc/systemd/system/tomcat.service
   
