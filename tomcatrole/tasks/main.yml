@@ -7,4 +7,4 @@
 - include_tasks: systemdServiceFile.yml
 - include_tasks: StartTomcatservice.yml
 - include_tasks: ConfigureWebInterface.yml
-- include_tasks: Managerapp.yml
+- include_tasks: restarttomcatservice.yml
